@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:text="CHANGE PASSWORD"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/textsecondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edt_oldpass_dialog"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/textcategory"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_edt"
+            android:hint="Type old password..."
+            android:layout_width="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:id="@+id/edt_newpass_dialog"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="5dp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/textcategory"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_edt"
+            android:hint="Type new password..."
+            android:layout_width="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/edt_repass_dialog"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="15dp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/textcategory"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_edt"
+            android:hint="Retype new password..."
+            android:layout_width="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:background="@color/btnblue"
+            android:textColor="@color/white"
+            android:id="@+id/btn_changepass_dialog"
+            android:text="Change Password"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

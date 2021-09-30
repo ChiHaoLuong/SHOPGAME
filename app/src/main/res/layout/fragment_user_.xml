@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_user"
+        android:src="@drawable/ic_baseline_person_24"
+        app:civ_fill_color="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"/>
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_user"
+        android:layout_marginTop="28dp"
+        android:text="Lương Chí Hào"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+    
+    <TextView
+        android:id="@+id/tv_user_money"
+        android:text="Money: 1,000 USD"
+        android:textColor="@color/textsecondary"
+        android:layout_marginHorizontal="35dp"
+        android:textSize="20sp"
+        android:layout_below="@id/tv_user_name"
+        android:layout_marginTop="43dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_user_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_user_money"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="13dp"
+        android:text="Username: haolcps14498"
+        android:textColor="@color/textsecondary"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_getmoney"
+        android:background="@drawable/custome_btn"
+        android:text="Get money"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_user_username"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_user_change_pass"
+        android:text="Change Password"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:layout_below="@id/btn_getmoney"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_user_logout"
+        android:text="LogOut"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:layout_below="@id/tv_user_change_pass"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

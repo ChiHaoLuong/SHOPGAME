@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Other_Activities.Details_Activity">
+
+    <ImageView
+        android:id="@+id/iv_details"
+        android:src="@drawable/gta"
+        android:layout_marginHorizontal="10dp"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <TextView
+        android:id="@+id/tvname_details"
+        android:textSize="20sp"
+        android:layout_below="@id/iv_details"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_below="@id/tvname_details"
+        android:layout_above="@id/tvdeveloper_details"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvdescrible_details"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </ScrollView>
+    
+    <TextView
+        android:id="@+id/tvdeveloper_details"
+        android:textColor="@color/textsecondary"
+        android:textSize="15sp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_above="@id/tvrating_details"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvrating_details"
+        android:textColor="@color/textsecondary"
+        android:textSize="15sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_above="@id/tvprice_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvprice_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="$20 USD"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    
+    <Button
+        android:id="@+id/btn_buy_details"
+        android:background="@color/btnblue"
+        android:text="BUY"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/white"
+        android:layout_width="150dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_height="40dp"/>
+
+</RelativeLayout>

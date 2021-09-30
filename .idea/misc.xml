@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/drawable/custom_edt.xml" value="0.25092592592592594" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/drawable/custom_edt_search.xml" value="0.175" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/drawable/custome_btn.xml" value="0.25092592592592594" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/drawable/ic_baseline_category_24.xml" value="0.15462962962962962" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.15462962962962962" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.15462962962962962" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.15462962962962962" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/drawable/selected_tab.xml" value="0.1574074074074074" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/drawable/tab_rect.xml" value="0.1574074074074074" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/drawable/tab_selector_item.xml" value="0.1574074074074074" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/drawable/vie_bg.xml" value="0.25092592592592594" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/layout/activity_details.xml" value="0.14492753623188406" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/layout/activity_splash.xml" value="0.12613981762917933" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/layout/cartgame_items.xml" value="0.14492753623188406" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/layout/categorygame_items.xml" value="0.14492753623188406" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/layout/forget_pass_dialog.xml" value="0.12613981762917933" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/layout/fragment_cart_.xml" value="0.12613981762917933" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/layout/fragment_category_.xml" value="0.12613981762917933" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/layout/fragment_home_.xml" value="0.12613981762917933" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/layout/fragment_user_.xml" value="0.12613981762917933" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/layout/freegame_items.xml" value="0.14492753623188406" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/layout/login_fragment.xml" value="0.2" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/layout/signup_fragment.xml" value="0.259375" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/layout/topratinggame_items.xml" value="0.2" />
+        <entry key="..\:/AndroidNetWorking/PS14498_LUONGCHIHAO_ASM/app/src/main/res/menu/tabs.xml" value="0.22962962962962963" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
