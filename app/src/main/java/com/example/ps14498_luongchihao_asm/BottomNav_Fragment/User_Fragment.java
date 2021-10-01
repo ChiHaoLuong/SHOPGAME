@@ -76,7 +76,7 @@ public class User_Fragment extends Fragment {
                 btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        changePass(edtold,edtnew, edtre, dialog);
+                        changePass(userId,edtold,edtnew, edtre, dialog);
                     }
                 });
                 dialog.show();
@@ -87,7 +87,7 @@ public class User_Fragment extends Fragment {
         return root;
     }
 
-    private void changePass(EditText edtold, EditText edtnew, EditText edtre, Dialog dialog) {
+    private void changePass(int userId, EditText edtold, EditText edtnew, EditText edtre, Dialog dialog) {
         String oldpass = edtold.getText().toString();
         String newpass = edtnew.getText().toString();
         String repass = edtre.getText().toString();
@@ -100,7 +100,7 @@ public class User_Fragment extends Fragment {
         {
             if (newpass.equals(repass))
             {
-                APIService.apiservice.changePass(oldpass, newpass).enqueue(new Callback<User_Models>() {
+                APIService.apiservice.changePass(userId,oldpass, newpass).enqueue(new Callback<User_Models>() {
                     @Override
                     public void onResponse(Call<User_Models> call, Response<User_Models> response) {
                         if (response.code()==200)

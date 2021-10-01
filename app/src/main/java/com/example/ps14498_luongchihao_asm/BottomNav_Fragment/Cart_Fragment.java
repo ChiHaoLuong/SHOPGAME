@@ -78,7 +78,7 @@ public class Cart_Fragment extends Fragment {
     private void setRCV(ArrayList<Game_Models> listgame) {
 
         rcv.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-        adapter = new Cartgame_Adapter(getContext(),listgame);
+        adapter = new Cartgame_Adapter(getActivity(),listgame);
         rcv.setAdapter(adapter);
 
     }

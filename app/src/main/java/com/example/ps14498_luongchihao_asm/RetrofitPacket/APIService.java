@@ -14,7 +14,7 @@ import retrofit2.http.Query;
 
 public interface APIService {
 
-    String link = "http://192.168.0.105/gameshopphp/";
+    String link = "http://192.168.9.106/gameshopphp/";
 
     Gson gson = new GsonBuilder().setLenient().create();
     APIService apiservice = new Retrofit.Builder()
@@ -42,6 +42,7 @@ public interface APIService {
 
     @GET("changePasswordUser.php")
     Call<User_Models> changePass(
+            @Query("edtUserId") int userId,
             @Query("edtOldpass") String oldpassword,
             @Query("edtNewpass") String newpassword
     );
