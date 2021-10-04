@@ -1,10 +1,12 @@
 package com.example.ps14498_luongchihao_asm.RetrofitPacket;
 
+import com.example.ps14498_luongchihao_asm.Models.Responegameresult;
 import com.example.ps14498_luongchihao_asm.Models.User_Models;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -46,4 +48,10 @@ public interface APIService {
             @Query("edtOldpass") String oldpassword,
             @Query("edtNewpass") String newpassword
     );
+
+    @GET("getALLGame.php")
+    Call<Responegameresult> getAllGame(
+    );
+
+
 }

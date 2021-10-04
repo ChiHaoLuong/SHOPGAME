@@ -15,14 +15,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.example.ps14498_luongchihao_asm.Adapter.Topratinggame_Adapter;
 import com.example.ps14498_luongchihao_asm.Models.Game_Models;
+import com.example.ps14498_luongchihao_asm.Models.Responegameresult;
 import com.example.ps14498_luongchihao_asm.R;
+import com.example.ps14498_luongchihao_asm.RetrofitPacket.APIService;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Home_Fragment extends Fragment {
     ViewFlipper flipper ;
@@ -45,7 +53,7 @@ public class Home_Fragment extends Fragment {
 
         addList();
 
-        setRCV(listgame);
+
 
         searchGame(edtsearch);
 
@@ -91,12 +99,31 @@ public class Home_Fragment extends Fragment {
 
     private void addList() {
         listgame = new ArrayList<>();
-        listgame.add(new Game_Models(0, "GTA", 200, "https://cdn.tgdd.vn/Files/2020/05/15/1255578/gta5-free_800x450.jpg", "The Grand Theft Auto V: Premium Edition includes the complete GTAV story, Grand Theft Auto Online and all existing gameplay upgrades and content. You’ll also get the Criminal Enterprise Starter Pack, the fastest way to jumpstart your criminal empire in GTA Online.", "Rockstar Games", 0, 97));
-        listgame.add(new Game_Models(0, "GTB", 200, "https://cdn.tgdd.vn/Files/2020/05/15/1255578/gta5-free_800x450.jpg", "The Grand Theft Auto V: Premium Edition includes the complete GTAV story, Grand Theft Auto Online and all existing gameplay upgrades and content. You’ll also get the Criminal Enterprise Starter Pack, the fastest way to jumpstart your criminal empire in GTA Online.", "Rockstar Games", 0, 97));
-        listgame.add(new Game_Models(0, "GTC", 200, "https://cdn.tgdd.vn/Files/2020/05/15/1255578/gta5-free_800x450.jpg", "The Grand Theft Auto V: Premium Edition includes the complete GTAV story, Grand Theft Auto Online and all existing gameplay upgrades and content. You’ll also get the Criminal Enterprise Starter Pack, the fastest way to jumpstart your criminal empire in GTA Online.", "Rockstar Games", 0, 97));
-        listgame.add(new Game_Models(0, "GTD", 200, "https://cdn.tgdd.vn/Files/2020/05/15/1255578/gta5-free_800x450.jpg", "The Grand Theft Auto V: Premium Edition includes the complete GTAV story, Grand Theft Auto Online and all existing gameplay upgrades and content. You’ll also get the Criminal Enterprise Starter Pack, the fastest way to jumpstart your criminal empire in GTA Online.", "Rockstar Games", 0, 97));
-        listgame.add(new Game_Models(0, "GTE", 200, "https://cdn.tgdd.vn/Files/2020/05/15/1255578/gta5-free_800x450.jpg", "The Grand Theft Auto V: Premium Edition includes the complete GTAV story, Grand Theft Auto Online and all existing gameplay upgrades and content. You’ll also get the Criminal Enterprise Starter Pack, the fastest way to jumpstart your criminal empire in GTA Online.", "Rockstar Games", 0, 97));
-        listgame.add(new Game_Models(0, "GTF", 200, "https://cdn.tgdd.vn/Files/2020/05/15/1255578/gta5-free_800x450.jpg", "The Grand Theft Auto V: Premium Edition includes the complete GTAV story, Grand Theft Auto Online and all existing gameplay upgrades and content. You’ll also get the Criminal Enterprise Starter Pack, the fastest way to jumpstart your criminal empire in GTA Online.", "Rockstar Games", 0, 97));
+        APIService.apiservice.getAllGame().enqueue(new Callback<Responegameresult>() {
+            @Override
+            public void onResponse(Call<Responegameresult> call, Response<Responegameresult> response) {
+               if (response.code()==200)
+               {
+                   Responegameresult responegameresult = response.body();
+                   if (responegameresult.getResult()==1)
+                   {
+                       Toast.makeText(getContext(), responegameresult.getMes(), Toast.LENGTH_SHORT).show();
+                       listgame = responegameresult.listgame_models;
+                       setRCV(listgame);
+                   }
+                   else  Toast.makeText(getContext(), responegameresult.getMes(), Toast.LENGTH_SHORT).show();
+               }
+               else Log.i("bugg", response.errorBody()+"");
+
+            }
+
+            @Override
+            public void onFailure(Call<Responegameresult> call, Throwable t) {
+                Toast.makeText(getContext(), "Lỗi: "+t, Toast.LENGTH_SHORT).show();
+                Log.i("bugg", t.getMessage());
+            }
+        });
+
     }
 
     private void Anhxa(ViewGroup root) {

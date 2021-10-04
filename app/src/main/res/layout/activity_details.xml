@@ -39,6 +39,8 @@
             android:layout_height="wrap_content"/>
 
     </ScrollView>
+
+
     
     <TextView
         android:id="@+id/tvdeveloper_details"

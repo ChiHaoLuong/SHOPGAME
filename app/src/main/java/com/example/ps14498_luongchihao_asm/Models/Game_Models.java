@@ -3,28 +3,14 @@ package com.example.ps14498_luongchihao_asm.Models;
 import java.io.Serializable;
 
 public class Game_Models  {
-    private int gameId;
-    private String name;
-    private int price;
-    private String describle;
-    private String developer;
-    private int categoryId;
-    private int rating;
-    private String img;
-
-    @Override
-    public String toString() {
-        return "Game_Models{" +
-                "gameId=" + gameId +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", describle='" + describle + '\'' +
-                ", developer='" + developer + '\'' +
-                ", categoryId=" + categoryId +
-                ", rating=" + rating +
-                ", img='" + img + '\'' +
-                '}';
-    }
+    public int gameId;
+    public String name;
+    public int price;
+    public String describle;
+    public String developer;
+    public int categoryId;
+    public int rating;
+    public String img;
 
     public Game_Models(int gameId, String name, int price, String img, String describle, String developer, int categoryId, int rating) {
         this.gameId = gameId;
@@ -101,5 +87,19 @@ public class Game_Models  {
 
     public void setRating(int rating) {
         this.rating = rating;
+    }
+
+    @Override
+    public String toString() {
+        return "Game_Models{" +
+                "gameId=" + gameId +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", describle='" + describle + '\'' +
+                ", developer='" + developer + '\'' +
+                ", categoryId=" + categoryId +
+                ", rating=" + rating +
+                ", img='" + img + '\'' +
+                '}';
     }
 }
