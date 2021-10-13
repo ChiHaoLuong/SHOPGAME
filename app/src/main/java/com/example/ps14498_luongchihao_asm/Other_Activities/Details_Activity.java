@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.ps14498_luongchihao_asm.MainActivity;
 import com.example.ps14498_luongchihao_asm.Models.Game_Models;
 import com.example.ps14498_luongchihao_asm.Models.Responegameresult;
 import com.example.ps14498_luongchihao_asm.R;
@@ -87,6 +88,8 @@ public class Details_Activity extends AppCompatActivity {
                                    {
                                        Toast.makeText(Details_Activity.this, responegameresult.getMes(), Toast.LENGTH_SHORT).show();
                                         btnbuy.setEnabled(false);
+                                        btnbuy.setBackgroundColor(Color.GRAY);
+
                                    }
                                    else  Toast.makeText(Details_Activity.this, responegameresult.getMes(), Toast.LENGTH_SHORT).show();
                                }

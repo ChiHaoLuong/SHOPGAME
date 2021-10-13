@@ -72,7 +72,7 @@ public interface APIService {
     );
 
     @GET("getUserGame.php")
-    Call<User_Models> getUserGame(
+    Call<Responegameresult> getUserGame(
             @Query("edtUserId") int userId
     );
 

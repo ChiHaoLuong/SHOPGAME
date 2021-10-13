@@ -89,7 +89,6 @@ public class Category_Fragment extends Fragment {
                     Responegameresult responegameresult = response.body();
                     if (responegameresult.getResult()==1)
                     {
-                        Toast.makeText(getContext(), responegameresult.getMes(), Toast.LENGTH_SHORT).show();
                         listfreegame = responegameresult.listgame_models;
                         setRcvfree(listfreegame);
                     }
@@ -117,7 +116,6 @@ public class Category_Fragment extends Fragment {
                     Responegameresult responegameresult = response.body();
                     if (responegameresult.getResult()==1)
                     {
-                        Toast.makeText(getContext(), responegameresult.getMes(), Toast.LENGTH_SHORT).show();
                         listallgame = responegameresult.listgame_models;
                         setRcvall(listallgame);
                     }
@@ -145,7 +143,6 @@ public class Category_Fragment extends Fragment {
                     Responegameresult responegameresult = response.body();
                     if (responegameresult.getResult()==1)
                     {
-                        Toast.makeText(getContext(), responegameresult.getMes(), Toast.LENGTH_SHORT).show();
                         listpaygame = responegameresult.listgame_models;
                         setRcvpay(listpaygame);
                     }

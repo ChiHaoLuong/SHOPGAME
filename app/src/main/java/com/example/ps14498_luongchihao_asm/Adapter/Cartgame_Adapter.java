@@ -27,13 +27,13 @@ import java.util.ArrayList;
 public class Cartgame_Adapter extends RecyclerView.Adapter<Cartgame_Adapter.viewHolder>{
     Context context;
     ArrayList<Game_Models> list = new ArrayList<>();
-//    ArrayList<String> filterlist = new ArrayList<>();
+    int userId;
 
 
-    public Cartgame_Adapter(Context context, ArrayList<Game_Models> list) {
+    public Cartgame_Adapter(Context context, ArrayList<Game_Models> list, int userId) {
         this.context = context;
         this.list = list;
-
+        this.userId = userId;
     }
 
     @NonNull
@@ -60,6 +60,7 @@ public class Cartgame_Adapter extends RecyclerView.Adapter<Cartgame_Adapter.view
                 i.putExtra("rat", models.getRating());
                 i.putExtra("pri", models.getPrice());
                 i.putExtra("img", models.getImg());
+                i.putExtra("userId", userId);
                 i.putExtra("isBought", false);
 
 

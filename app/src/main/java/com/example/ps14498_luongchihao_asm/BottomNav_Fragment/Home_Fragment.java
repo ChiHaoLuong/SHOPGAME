@@ -107,7 +107,6 @@ public class Home_Fragment extends Fragment {
                    Responegameresult responegameresult = response.body();
                    if (responegameresult.getResult()==1)
                    {
-                       Toast.makeText(getContext(), responegameresult.getMes(), Toast.LENGTH_SHORT).show();
                        listgame = responegameresult.listgame_models;
                        setRCV(listgame);
                    }
