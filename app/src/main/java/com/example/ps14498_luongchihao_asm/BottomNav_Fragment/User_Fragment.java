@@ -57,9 +57,22 @@ public class User_Fragment extends Fragment {
 
 
 //        Gán dữ liệu
-        tvname.setText(name);
-        tvusername.setText("Email: "+username);
-        tvusermoney.setText("Money: "+money+" USD");
+        APIService.apiservice.getUserById(userId).enqueue(new Callback<User_Models>() {
+            @Override
+            public void onResponse(Call<User_Models> call, Response<User_Models> response) {
+                if (response.isSuccessful())
+                {
+                    User_Models models = response.body();
+                    Log.i("USERSSSSS", models.toString());
+                }
+                else  Log.i("USERSSSSS", response.errorBody().toString());
+            }
+
+            @Override
+            public void onFailure(Call<User_Models> call, Throwable t) {
+                Log.i("USERSSSSS", t.toString());
+            }
+        });
 
 
 //        Change pass

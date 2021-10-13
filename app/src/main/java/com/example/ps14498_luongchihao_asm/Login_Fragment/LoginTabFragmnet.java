@@ -135,7 +135,7 @@ public class LoginTabFragmnet extends Fragment {
             APIService.apiservice.getUser(username, password).enqueue(new Callback<User_Models>() {
                 @Override
                 public void onResponse(Call<User_Models> call, Response<User_Models> response) {
-                    if (response.code() == 200) {
+
                         if (response.code() == 200) {
                             if (response.body().getResult().equals("OK")) {
                                 User_Models model = response.body();
@@ -157,10 +157,7 @@ public class LoginTabFragmnet extends Fragment {
                             Log.i("KT", "Lỗi");
                             displayLoginInfor("Something went wrong");
                         }
-                    } else {
-                        Log.i("KT", "Lỗi");
-                        displayLoginInfor("Something went wrong");
-                    }
+
                 }
 
                 @Override

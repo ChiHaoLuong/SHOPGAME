@@ -24,11 +24,12 @@ import java.util.ArrayList;
 public class Topratinggame_Adapter extends RecyclerView.Adapter<Topratinggame_Adapter.viewHolder> {
     Context context;
     ArrayList<Game_Models> list = new ArrayList<>();
+    int userId;
 
-
-    public Topratinggame_Adapter(Context context, ArrayList<Game_Models> list) {
+    public Topratinggame_Adapter(Context context, ArrayList<Game_Models> list, int userId) {
         this.context = context;
         this.list = list;
+        this.userId = userId;
     }
 
     @NonNull
@@ -58,6 +59,7 @@ public class Topratinggame_Adapter extends RecyclerView.Adapter<Topratinggame_Ad
                 i.putExtra("rat", models.getRating());
                 i.putExtra("pri", models.getPrice());
                 i.putExtra("img", models.getImg());
+                i.putExtra("userId", userId);
                 i.putExtra("isBought", false);
 
 

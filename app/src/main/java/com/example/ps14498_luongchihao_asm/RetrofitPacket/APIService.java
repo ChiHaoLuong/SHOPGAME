@@ -76,4 +76,9 @@ public interface APIService {
             @Query("edtUserId") int userId
     );
 
+    @GET("getUserById.php")
+    Call<User_Models> getUserById(
+            @Query("edtUserId") int userId
+    );
+
 }

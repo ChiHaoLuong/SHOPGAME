@@ -39,12 +39,17 @@ public class Home_Fragment extends Fragment {
     ArrayList<Game_Models> listgame;
     Topratinggame_Adapter adapter;
     EditText edtsearch;
+    int userId;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_home_, container, false);
 
         Anhxa(root);
+
+        //        Lấy dữ liệu User
+        Bundle bundle = getArguments();
+        if (bundle!=null) userId = bundle.getInt("userId");
 
 //        Flipper
         Log.i("auto", flipper.isAutoStart()+"");
@@ -93,7 +98,7 @@ public class Home_Fragment extends Fragment {
 
     private void setRCV(ArrayList<Game_Models> listgame) {
         rcv.setLayoutManager(new GridLayoutManager(getContext(), 2));
-        adapter = new Topratinggame_Adapter(getContext(),listgame);
+        adapter = new Topratinggame_Adapter(getContext(),listgame, userId);
         rcv.setAdapter(adapter);
     }
 
