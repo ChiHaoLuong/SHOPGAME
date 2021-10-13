@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.ps14498_luongchihao_asm.Models.Game_Models;
 import com.example.ps14498_luongchihao_asm.Other_Activities.Details_Activity;
 import com.example.ps14498_luongchihao_asm.R;
@@ -22,11 +23,12 @@ import java.util.ArrayList;
 public class Categorygame_Adapter extends RecyclerView.Adapter<Categorygame_Adapter.viewHolder> {
     Context context;
     ArrayList<Game_Models> list = new ArrayList<>();
+    int userId;
 
-
-    public Categorygame_Adapter(Context context, ArrayList<Game_Models> list) {
+    public Categorygame_Adapter(Context context, ArrayList<Game_Models> list, int userId) {
         this.context = context;
         this.list = list;
+        this.userId = userId;
     }
 
     @NonNull
@@ -41,6 +43,8 @@ public class Categorygame_Adapter extends RecyclerView.Adapter<Categorygame_Adap
         Game_Models models = list.get(position);
         holder.tvname.setText(models.getName());
         holder.tvprice.setText("$"+models.getPrice()+"USD");
+        String link = models.getImg();
+        Glide.with(context).load(link).centerCrop().into(holder.iv);
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,6 +55,8 @@ public class Categorygame_Adapter extends RecyclerView.Adapter<Categorygame_Adap
                 i.putExtra("dev", models.getDeveloper());
                 i.putExtra("rat", models.getRating());
                 i.putExtra("pri", models.getPrice());
+                i.putExtra("img", models.getImg());
+                i.putExtra("userId", userId);
                 i.putExtra("isBought", false);
 
 

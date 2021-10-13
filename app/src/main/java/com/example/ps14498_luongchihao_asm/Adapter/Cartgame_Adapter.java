@@ -16,6 +16,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.ps14498_luongchihao_asm.Models.Game_Models;
 import com.example.ps14498_luongchihao_asm.Other_Activities.Details_Activity;
 import com.example.ps14498_luongchihao_asm.R;
@@ -46,6 +47,8 @@ public class Cartgame_Adapter extends RecyclerView.Adapter<Cartgame_Adapter.view
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         Game_Models models = list.get(position);
         holder.tvname.setText(models.getName());
+        String link = models.getImg();
+        Glide.with(context).load(link).centerCrop().into(holder.iv);
         holder.rl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,8 +59,9 @@ public class Cartgame_Adapter extends RecyclerView.Adapter<Cartgame_Adapter.view
                 i.putExtra("dev", models.getDeveloper());
                 i.putExtra("rat", models.getRating());
                 i.putExtra("pri", models.getPrice());
-                i.putExtra("isBought", true);
-                Log.i("Game", models.toString());
+                i.putExtra("img", models.getImg());
+                i.putExtra("isBought", false);
+
 
                 context.startActivity(i);
             }

@@ -20,10 +20,12 @@
         android:textSize="20sp"
         android:layout_below="@id/iv_details"
         android:textColor="@color/white"
+        android:layout_marginHorizontal="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <ScrollView
+        android:layout_marginTop="10dp"
         android:layout_below="@id/tvname_details"
         android:layout_above="@id/tvdeveloper_details"
         android:layout_marginHorizontal="10dp"

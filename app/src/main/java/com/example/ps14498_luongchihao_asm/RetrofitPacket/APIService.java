@@ -16,7 +16,7 @@ import retrofit2.http.Query;
 
 public interface APIService {
 
-    String link = "http://192.168.9.106/gameshopphp/";
+    String link = "http://192.168.0.110/gameshopphp/";
 
     Gson gson = new GsonBuilder().setLenient().create();
     APIService apiservice = new Retrofit.Builder()
@@ -53,5 +53,27 @@ public interface APIService {
     Call<Responegameresult> getAllGame(
     );
 
+    @GET("getTopRatingGame.php")
+    Call<Responegameresult> getTopRatingGame(
+    );
+
+    @GET("getFreeGame.php")
+    Call<Responegameresult> getFreeGame(
+    );
+
+    @GET("getPayGame.php")
+    Call<Responegameresult> getPayGame(
+    );
+
+    @GET("buyGame.php")
+    Call<Responegameresult> buyGame(
+        @Query("edtGameId") int gameId,
+        @Query("edtUserId") int userId
+    );
+
+    @GET("getUserGame.php")
+    Call<User_Models> getUserGame(
+            @Query("edtUserId") int userId
+    );
 
 }

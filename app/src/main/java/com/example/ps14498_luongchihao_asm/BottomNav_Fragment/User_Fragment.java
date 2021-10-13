@@ -140,7 +140,7 @@ public class User_Fragment extends Fragment {
                     }
                 });
 
-                builder.setNegativeButton("CANCLE", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 

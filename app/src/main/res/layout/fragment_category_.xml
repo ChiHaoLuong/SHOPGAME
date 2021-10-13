@@ -15,7 +15,7 @@
             android:textColor="@color/textcategory"
             android:text="Game free"
             android:layout_marginHorizontal="13dp"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -29,7 +29,7 @@
             android:textColor="@color/textcategory"
             android:text="Game Paying"
             android:layout_margin="13dp"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -43,7 +43,7 @@
             android:textColor="@color/textcategory"
             android:text="All game"
             android:layout_margin="13dp"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

@@ -99,7 +99,7 @@ public class Home_Fragment extends Fragment {
 
     private void addList() {
         listgame = new ArrayList<>();
-        APIService.apiservice.getAllGame().enqueue(new Callback<Responegameresult>() {
+        APIService.apiservice.getTopRatingGame().enqueue(new Callback<Responegameresult>() {
             @Override
             public void onResponse(Call<Responegameresult> call, Response<Responegameresult> response) {
                if (response.code()==200)
