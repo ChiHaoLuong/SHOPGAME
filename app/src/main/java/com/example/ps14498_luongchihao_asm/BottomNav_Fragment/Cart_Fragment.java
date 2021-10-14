@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.ps14498_luongchihao_asm.Adapter.Cartgame_Adapter;
 import com.example.ps14498_luongchihao_asm.Adapter.Categorygame_Adapter;
@@ -33,6 +34,7 @@ public class Cart_Fragment extends Fragment {
     Cartgame_Adapter adapter;
     RecyclerView rcv;
     EditText edtsearch;
+    SwipeRefreshLayout swipe;
     int userId;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,6 +49,15 @@ public class Cart_Fragment extends Fragment {
         addList();
         setRCV(listgame);
         searchGame(edtsearch);
+
+//        Vuốt để tải dữ liệu
+        swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                addList();
+                swipe.setRefreshing(false);
+            }
+        });
 
         return root;
     }
@@ -86,6 +97,7 @@ public class Cart_Fragment extends Fragment {
     private void anhXa(ViewGroup root) {
         rcv = root.findViewById(R.id.rcv_cart);
         edtsearch = root.findViewById(R.id.edt_search_cart);
+        swipe = root.findViewById(R.id.swipe_cart);
     }
 
     private void setRCV(ArrayList<Game_Models> listgame) {

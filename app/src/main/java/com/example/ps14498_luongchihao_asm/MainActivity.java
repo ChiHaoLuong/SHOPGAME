@@ -83,12 +83,15 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.tab_user:
                         fragment = user_fragment;
                         break;
+
+                    default:
+                        fragment = home_fragment;
                 }
                 if (fragment!=null)
                 {
-
                     fm = getSupportFragmentManager();
                     fm.beginTransaction().replace(R.id.frl, fragment).commit();
+
                 }
                 else
                 {

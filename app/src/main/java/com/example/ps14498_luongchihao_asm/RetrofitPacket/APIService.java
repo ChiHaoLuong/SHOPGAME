@@ -81,4 +81,10 @@ public interface APIService {
             @Query("edtUserId") int userId
     );
 
+    @GET("dropGame.php")
+    Call<Responegameresult> dropGame(
+            @Query("edtGameId") int gameId,
+            @Query("edtUserId") int userId
+    );
+
 }

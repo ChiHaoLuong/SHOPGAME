@@ -28,19 +28,9 @@
         android:layout_width="match_parent"
         android:autoStart="true"
         android:inAnimation="@anim/slide_to_right"
-        android:layout_height="wrap_content">
+        android:layout_height="200dp">
 
-        <ImageView
-            android:src="@drawable/gta"
-            android:scaleType="centerCrop"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"/>
 
-        <ImageView
-            android:src="@drawable/logo"
-            android:scaleType="centerCrop"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"/>
 
     </ViewFlipper>
 

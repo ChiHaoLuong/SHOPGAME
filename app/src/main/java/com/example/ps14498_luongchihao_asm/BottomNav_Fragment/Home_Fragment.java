@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import com.bumptech.glide.Glide;
 import com.example.ps14498_luongchihao_asm.Adapter.Topratinggame_Adapter;
 import com.example.ps14498_luongchihao_asm.Models.Game_Models;
 import com.example.ps14498_luongchihao_asm.Models.Responegameresult;
@@ -35,7 +36,6 @@ import retrofit2.Response;
 public class Home_Fragment extends Fragment {
     ViewFlipper flipper ;
     RecyclerView rcv;
-    Game_Models game_models;
     ArrayList<Game_Models> listgame;
     Topratinggame_Adapter adapter;
     EditText edtsearch;
@@ -50,15 +50,9 @@ public class Home_Fragment extends Fragment {
         //        Lấy dữ liệu User
         Bundle bundle = getArguments();
         if (bundle!=null) userId = bundle.getInt("userId");
-
-//        Flipper
-        Log.i("auto", flipper.isAutoStart()+"");
-        flipper.startFlipping();
-        flipper.setFlipInterval(3000);
+        Log.i("userIddddddd", userId+"");
 
         addList();
-
-
 
         searchGame(edtsearch);
 
@@ -98,6 +92,7 @@ public class Home_Fragment extends Fragment {
 
     private void setRCV(ArrayList<Game_Models> listgame) {
         rcv.setLayoutManager(new GridLayoutManager(getContext(), 2));
+
         adapter = new Topratinggame_Adapter(getContext(),listgame, userId);
         rcv.setAdapter(adapter);
     }
@@ -114,6 +109,19 @@ public class Home_Fragment extends Fragment {
                    {
                        listgame = responegameresult.listgame_models;
                        setRCV(listgame);
+//                       Set view Flipper
+                       for (int i=0; i<5; i++)
+                       {
+                           String linkimg = listgame.get(i).getImg();
+                           ImageView iv = new ImageView(getContext());
+                           Glide.with(getContext()).load(linkimg).centerCrop().into(iv);
+                           flipper.addView(iv);
+                       }
+                       flipper.setInAnimation(getContext(), R.anim.slide_to_right);
+                       flipper.setOutAnimation(getContext(), R.anim.slide_to_left);
+                       flipper.setFlipInterval(3000);
+                       flipper.setAutoStart(true);
+
                    }
                    else  Toast.makeText(getContext(), responegameresult.getMes(), Toast.LENGTH_SHORT).show();
                }
