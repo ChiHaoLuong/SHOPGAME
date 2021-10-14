@@ -18,6 +18,7 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.example.ps14498_luongchihao_asm.Models.User_Models;
+import com.example.ps14498_luongchihao_asm.Other_Activities.CaptchaGG;
 import com.example.ps14498_luongchihao_asm.Other_Activities.Login_Activity;
 import com.example.ps14498_luongchihao_asm.R;
 import com.example.ps14498_luongchihao_asm.RetrofitPacket.APIService;
@@ -98,8 +99,23 @@ public class User_Fragment extends Fragment {
             }
         });
 
+//          Get Money
+        btngetmonney.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getMoney();
+            }
+        });
+
+
 
         return root;
+    }
+
+    private void getMoney() {
+        Intent i = new Intent(getContext(), CaptchaGG.class);
+        startActivity(i);
+
     }
 
     private void changePass(int userId, EditText edtold, EditText edtnew, EditText edtre, Dialog dialog) {
