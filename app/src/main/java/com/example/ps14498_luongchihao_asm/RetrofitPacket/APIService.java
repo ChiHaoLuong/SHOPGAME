@@ -16,7 +16,7 @@ import retrofit2.http.Query;
 
 public interface APIService {
 
-    String link = "http://192.168.0.110/gameshopphp/";
+    String link = "http://192.168.0.103/gameshopphp/";
 
     Gson gson = new GsonBuilder().setLenient().create();
     APIService apiservice = new Retrofit.Builder()

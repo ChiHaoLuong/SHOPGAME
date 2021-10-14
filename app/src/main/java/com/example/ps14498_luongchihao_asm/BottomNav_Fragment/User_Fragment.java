@@ -63,7 +63,9 @@ public class User_Fragment extends Fragment {
                 if (response.isSuccessful())
                 {
                     User_Models models = response.body();
-                    Log.i("USERSSSSS", models.toString());
+                    tvname.setText(models.getName());
+                    tvusername.setText("Email: "+models.getUsername());
+                    tvusermoney.setText("$: "+models.getMoney()+"USD");
                 }
                 else  Log.i("USERSSSSS", response.errorBody().toString());
             }
