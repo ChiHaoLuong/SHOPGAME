@@ -53,6 +53,7 @@ public class CaptchaGG extends AppCompatActivity implements GoogleApiClient.Conn
                                         Toast.makeText(CaptchaGG.this, "Successfully Varified...", Toast.LENGTH_SHORT).show();
                                         cb.setTextColor(Color.GREEN);
 //                                        Viết hàm thành công ở đây nè
+
                                     }
                                 }
                             });
