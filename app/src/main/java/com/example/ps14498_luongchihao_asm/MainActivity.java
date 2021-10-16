@@ -22,11 +22,9 @@ import nl.joery.animatedbottombar.AnimatedBottomBar;
 public class MainActivity extends AppCompatActivity {
     AnimatedBottomBar nav;
     FragmentManager fm;
-    private String name;
-    private  String username;
-    private  String  password;
-    private  int userId;
-    private  int money;
+
+
+
 
     Cart_Fragment cart_fragment = new Cart_Fragment();
     Category_Fragment category_fragment = new Category_Fragment();
@@ -39,22 +37,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         AnhXa();
 
-        layDulieuIntent();
 
-//        Truyền dữ liệu bundle vào các fragment
 
-        Bundle bundle = new Bundle();
-        bundle.putString("name", name);
-        bundle.putString("username", username);
-        bundle.putString("password", password);
-        bundle.putInt("userId", userId);
-        bundle.putInt("money", money);
-        User_Models models = new User_Models(userId, username, name, password, money);
-        Log.i("KTDL", models.toString());
-        cart_fragment.setArguments(bundle);
-        category_fragment.setArguments(bundle);
-        home_fragment.setArguments(bundle);
-        user_fragment.setArguments(bundle);
+//
+
 
 
 
@@ -106,22 +92,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void layDulieuIntent() {
-        Intent intent = getIntent();
-        if (intent==null)
-        {
-            Log.i("dữ liệu", "NULLLLLL");
-        }
-        else
-        {
-             name = intent.getStringExtra("name");
-             username = intent.getStringExtra("username");
-             userId = intent.getIntExtra("userId", 100);
-             password = intent.getStringExtra("password");
-             money = intent.getIntExtra("money", 0);
 
-        }
-    }
 
 
     private void AnhXa() {

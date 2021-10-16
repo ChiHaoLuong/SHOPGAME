@@ -1,7 +1,9 @@
 package com.example.ps14498_luongchihao_asm.Login_Fragment;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,6 +25,7 @@ import com.example.ps14498_luongchihao_asm.Models.Game_Models;
 import com.example.ps14498_luongchihao_asm.RetrofitPacket.APIService;
 import com.example.ps14498_luongchihao_asm.Models.User_Models;
 import com.example.ps14498_luongchihao_asm.R;
+import com.example.ps14498_luongchihao_asm.tranformUserId;
 
 import java.util.ArrayList;
 
@@ -36,6 +39,7 @@ public class LoginTabFragmnet extends Fragment {
     float v =0;
     TextView tv_forget;
     ProgressBar pb;
+    SharedPreferences preferences;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.login_fragment, container, false);
@@ -140,11 +144,7 @@ public class LoginTabFragmnet extends Fragment {
                             if (response.body().getResult().equals("OK")) {
                                 User_Models model = response.body();
                                 Intent i = new Intent(getContext(), MainActivity.class);
-                                i.putExtra("userId", model.getUserId());
-                                i.putExtra("username", model.getUsername());
-                                i.putExtra("name", model.getName());
-                                i.putExtra("password", model.getPassword());
-                                i.putExtra("money", model.getMoney());
+                                tranformUserId.putUserId(getContext(), model.getUserId());
                                 startActivity(i);
                                 pb.setVisibility(View.INVISIBLE);
                                 Toast.makeText(getContext(), "Đăng nhập thành công", Toast.LENGTH_SHORT).show();

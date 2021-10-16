@@ -18,6 +18,7 @@ import com.example.ps14498_luongchihao_asm.Models.Responegameresult;
 import com.example.ps14498_luongchihao_asm.Models.User_Models;
 import com.example.ps14498_luongchihao_asm.R;
 import com.example.ps14498_luongchihao_asm.RetrofitPacket.APIService;
+import com.example.ps14498_luongchihao_asm.tranformUserId;
 
 import java.util.ArrayList;
 
@@ -35,9 +36,9 @@ public class Category_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_category_, container, false);
 
-//        Lấy dữ liệu User
-        Bundle bundle = getArguments();
-        if (bundle!=null) userId = bundle.getInt("userId");
+
+        //        Lấy dữ liệu User
+        userId = tranformUserId.getUserId(getContext());
 
 
             anhXa(root);

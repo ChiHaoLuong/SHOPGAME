@@ -24,6 +24,7 @@ import com.example.ps14498_luongchihao_asm.Models.Game_Models;
 import com.example.ps14498_luongchihao_asm.Models.Responegameresult;
 import com.example.ps14498_luongchihao_asm.R;
 import com.example.ps14498_luongchihao_asm.RetrofitPacket.APIService;
+import com.example.ps14498_luongchihao_asm.tranformUserId;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -47,10 +48,9 @@ public class Home_Fragment extends Fragment {
 
         Anhxa(root);
 
+
         //        Lấy dữ liệu User
-        Bundle bundle = getArguments();
-        if (bundle!=null) userId = bundle.getInt("userId");
-        Log.i("userIddddddd", userId+"");
+        userId = tranformUserId.getUserId(getContext());
 
         addList();
 

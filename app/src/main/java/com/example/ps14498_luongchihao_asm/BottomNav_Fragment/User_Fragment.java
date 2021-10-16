@@ -22,6 +22,7 @@ import com.example.ps14498_luongchihao_asm.Other_Activities.CaptchaGG;
 import com.example.ps14498_luongchihao_asm.Other_Activities.Login_Activity;
 import com.example.ps14498_luongchihao_asm.R;
 import com.example.ps14498_luongchihao_asm.RetrofitPacket.APIService;
+import com.example.ps14498_luongchihao_asm.tranformUserId;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -42,19 +43,9 @@ public class User_Fragment extends Fragment {
 
         dangXuat(tvlogout);
 
-//        Lấy dữ liệu Bundle
-        Bundle bundle = getArguments();
-        if (bundle!=null)
-        {
-            name = bundle.getString("name");
-            username = bundle.getString("username");
-            password = bundle.getString("password");
-            money = bundle.getInt("money");
-            userId = bundle.getInt("userId");
-            User_Models models = new User_Models(userId, username, name, password, money);
-            Log.i("User_fragment", models.toString());
-        }
-        else Log.i("User_fragment", "Không nhận được dữ liệu");
+
+        //        Lấy dữ liệu User
+        userId = tranformUserId.getUserId(getContext());
 
 
 //        Gán dữ liệu

@@ -22,6 +22,7 @@ import com.example.ps14498_luongchihao_asm.Models.Game_Models;
 import com.example.ps14498_luongchihao_asm.Models.Responegameresult;
 import com.example.ps14498_luongchihao_asm.R;
 import com.example.ps14498_luongchihao_asm.RetrofitPacket.APIService;
+import com.example.ps14498_luongchihao_asm.tranformUserId;
 
 import java.util.ArrayList;
 
@@ -42,8 +43,7 @@ public class Cart_Fragment extends Fragment {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_cart_, container, false);
 
         //        Lấy dữ liệu User
-        Bundle bundle = getArguments();
-        if (bundle!=null) userId = bundle.getInt("userId");
+        userId = tranformUserId.getUserId(getContext());
 
         anhXa(root);
         addList();
