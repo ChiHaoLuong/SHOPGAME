@@ -31,8 +31,7 @@ import retrofit2.Response;
 public class User_Fragment extends Fragment {
     Button btngetmonney;
     TextView tvchangepass, tvlogout, tvusername, tvname, tvusermoney;
-    String name, username, password;
-    int money, userId;
+    int userId;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -150,7 +150,7 @@ public class LoginTabFragmnet extends Fragment {
                                 Toast.makeText(getContext(), "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                             } else {
                                 pb.setVisibility(View.INVISIBLE);
-                                Toast.makeText(getContext(), "Tạo tài khoản thất bại: " + response.body().getResult(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "Đăng nhập thất bại: " + response.body().getResult(), Toast.LENGTH_SHORT).show();
                                 Log.i("KT", "Sai tài khoản mật khẩu  Link: http://192.168.9.106/gameshopphp/loginUser.php?edtUsername=" + username + "&edtPassword=" + password);
                             }
                         } else {
